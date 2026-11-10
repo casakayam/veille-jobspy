@@ -1,8 +1,9 @@
 {
- "mis_a_jour": "2026-11-10T16:51:53+00:00",
+ "mis_a_jour": "2026-11-10T16:58:28+00:00",
  "ecartees": {
-  "titre exclu": 11,
-  "pas de couple": 46
+  "titre exclu": 47,
+  "pas un poste en couple": 115,
+  "hors Europe": 1
  },
  "requetes": [
   {
@@ -10,7 +11,34 @@
     "indeed"
    ],
    "pays": "france",
-   "requete": "\"couple de gardiens\"",
+   "requete": "couple gardiens",
+   "resultats": 30,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "france",
+   "requete": "couple gérants",
+   "resultats": 1,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "france",
+   "requete": "couple concierges",
+   "resultats": 1,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "france",
+   "requete": "couple régisseurs",
    "resultats": 0,
    "retenues": 0
   },
@@ -19,7 +47,7 @@
     "indeed"
    ],
    "pays": "france",
-   "requete": "\"couple de gérants\"",
+   "requete": "couple intendants",
    "resultats": 0,
    "retenues": 0
   },
@@ -28,7 +56,25 @@
     "indeed"
    ],
    "pays": "france",
-   "requete": "\"couple\" gérants camping",
+   "requete": "couple camping",
+   "resultats": 30,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "france",
+   "requete": "couple gîte",
+   "resultats": 3,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "france",
+   "requete": "couple hôtel logé",
    "resultats": 0,
    "retenues": 0
   },
@@ -37,17 +83,8 @@
     "indeed"
    ],
    "pays": "france",
-   "requete": "\"couple\" responsables gîte OR auberge OR refuge",
-   "resultats": 15,
-   "retenues": 6
-  },
-  {
-   "sites": [
-    "indeed"
-   ],
-   "pays": "france",
-   "requete": "\"poste en couple\" logé",
-   "resultats": 0,
+   "requete": "poste en couple",
+   "resultats": 30,
    "retenues": 0
   },
   {
@@ -55,26 +92,8 @@
     "indeed"
    ],
    "pays": "france",
-   "requete": "\"couple\" régisseurs OR intendants domaine",
-   "resultats": 19,
-   "retenues": 5
-  },
-  {
-   "sites": [
-    "indeed"
-   ],
-   "pays": "france",
-   "requete": "\"couple\" hôtel logé gérance",
-   "resultats": 0,
-   "retenues": 0
-  },
-  {
-   "sites": [
-    "indeed"
-   ],
-   "pays": "france",
-   "requete": "\"gardien de refuge\"",
-   "resultats": 0,
+   "requete": "gardien refuge",
+   "resultats": 1,
    "retenues": 0
   },
   {
@@ -83,8 +102,8 @@
    ],
    "pays": "",
    "requete": "couple gardiens",
-   "resultats": 2,
-   "retenues": 2
+   "resultats": 3,
+   "retenues": 3
   },
   {
    "sites": [
@@ -101,7 +120,7 @@
    ],
    "pays": "",
    "requete": "couple camping",
-   "resultats": 0,
+   "resultats": 4,
    "retenues": 0
   },
   {
@@ -110,8 +129,17 @@
    ],
    "pays": "",
    "requete": "poste en couple",
-   "resultats": 5,
+   "resultats": 16,
    "retenues": 0
+  },
+  {
+   "sites": [
+    "hellowork"
+   ],
+   "pays": "",
+   "requete": "couple concierges",
+   "resultats": 1,
+   "retenues": 1
   },
   {
    "sites": [
@@ -119,8 +147,8 @@
    ],
    "pays": "spain",
    "requete": "pareja guardeses",
-   "resultats": 0,
-   "retenues": 0
+   "resultats": 4,
+   "retenues": 4
   },
   {
    "sites": [
@@ -138,7 +166,7 @@
    "pays": "spain",
    "requete": "pareja encargados",
    "resultats": 1,
-   "retenues": 1
+   "retenues": 0
   },
   {
    "sites": [
@@ -146,6 +174,24 @@
    ],
    "pays": "spain",
    "requete": "matrimonio interno",
+   "resultats": 2,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "spain",
+   "requete": "se busca pareja",
+   "resultats": 6,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "portugal",
+   "requete": "couple caretakers",
    "resultats": 0,
    "retenues": 0
   },
@@ -154,16 +200,7 @@
     "indeed"
    ],
    "pays": "portugal",
-   "requete": "\"couple\" caretakers OR managers",
-   "resultats": 1,
-   "retenues": 0
-  },
-  {
-   "sites": [
-    "indeed"
-   ],
-   "pays": "ireland",
-   "requete": "\"live-in couple\"",
+   "requete": "couple managers",
    "resultats": 0,
    "retenues": 0
   },
@@ -172,7 +209,16 @@
     "indeed"
    ],
    "pays": "ireland",
-   "requete": "\"management couple\"",
+   "requete": "live-in couple",
+   "resultats": 5,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "ireland",
+   "requete": "couple caretakers",
    "resultats": 0,
    "retenues": 0
   },
@@ -181,17 +227,35 @@
     "indeed"
    ],
    "pays": "ireland",
-   "requete": "\"couple\" caretakers OR housekeepers",
-   "resultats": 2,
-   "retenues": 2
+   "requete": "couple managers",
+   "resultats": 6,
+   "retenues": 0
   },
   {
    "sites": [
     "indeed"
    ],
    "pays": "switzerland",
-   "requete": "\"couple\" gérants OR gardiens OR concierges",
-   "resultats": 1,
+   "requete": "couple concierges",
+   "resultats": 0,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "switzerland",
+   "requete": "couple gérants",
+   "resultats": 0,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "switzerland",
+   "requete": "couple gardiens",
+   "resultats": 0,
    "retenues": 0
   },
   {
@@ -199,16 +263,25 @@
     "indeed"
    ],
    "pays": "belgium",
-   "requete": "\"couple\" gérants OR gardiens",
-   "resultats": 2,
+   "requete": "couple concierges",
+   "resultats": 1,
    "retenues": 1
   },
   {
    "sites": [
     "indeed"
    ],
+   "pays": "belgium",
+   "requete": "couple gérants",
+   "resultats": 0,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
    "pays": "luxembourg",
-   "requete": "\"couple\" gérants OR gardiens",
+   "requete": "couple gérants",
    "resultats": 0,
    "retenues": 0
   },
@@ -217,7 +290,16 @@
     "indeed"
    ],
    "pays": "italy",
-   "requete": "\"couple\" villa OR estate managers",
+   "requete": "couple managers",
+   "resultats": 0,
+   "retenues": 0
+  },
+  {
+   "sites": [
+    "indeed"
+   ],
+   "pays": "italy",
+   "requete": "couple caretakers",
    "resultats": 0,
    "retenues": 0
   },
@@ -226,7 +308,7 @@
     "indeed"
    ],
    "pays": "greece",
-   "requete": "\"couple\" villa OR hotel managers",
+   "requete": "couple managers",
    "resultats": 0,
    "retenues": 0
   },
@@ -235,56 +317,8 @@
     "linkedin"
    ],
    "pays": "",
-   "requete": "couple manager hotel OR guesthouse OR lodge",
+   "requete": "live-in couple",
    "resultats": 30,
-   "retenues": 0
-  },
-  {
-   "sites": [
-    "linkedin"
-   ],
-   "pays": "",
-   "requete": "caretaker couple",
-   "resultats": 0,
-   "erreurs": {
-    "linkedin": "response status code 429 (blocked: use a proxy)"
-   },
-   "retenues": 0
-  },
-  {
-   "sites": [
-    "google"
-   ],
-   "pays": "",
-   "requete": "couple de gardiens offre d'emploi logé France since last 3 days",
-   "resultats": 0,
-   "erreurs": {
-    "google": "no job data returned"
-   },
-   "retenues": 0
-  },
-  {
-   "sites": [
-    "google"
-   ],
-   "pays": "",
-   "requete": "couple gérants camping OR gîte emploi since last 3 days",
-   "resultats": 0,
-   "erreurs": {
-    "google": "no job data returned"
-   },
-   "retenues": 0
-  },
-  {
-   "sites": [
-    "google"
-   ],
-   "pays": "",
-   "requete": "live-in couple managers hotel Europe jobs since last 3 days",
-   "resultats": 0,
-   "erreurs": {
-    "google": "no job data returned"
-   },
    "retenues": 0
   }
  ]
