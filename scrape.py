@@ -95,7 +95,8 @@ TITRE_EXCLU = re.compile(
     r"aide[- ]soignant|infirmi|chauffeur|vendeu|caissi|cleaner|nanny|nounou|baby-?sitt|"
     r"au pair|portier|conseill(er|ère) en|th[ée]rapeut|psycho|stage|intern(ship)?\b|alternance|"
     r"travailleu\w+ social|[ée]ducat|accompagnant|support worker|relief worker|care assistant|"
-    r"vigilant|s[ée]curit[ée]|technici|op[ée]rat(eur|rice)|ing[ée]nieur|d[ée]veloppeu|comptab",
+    r"vigilant|s[ée]curit[ée]|technici|op[ée]rat(eur|rice)|ing[ée]nieur|d[ée]veloppeu|comptab|"
+    r"sage[- ]femme|m[ée]decin|p[ée]diatre|pu[ée]ricult|chercheu|post[- ]?doc",
     re.I,
 )
 # Lieux hors cible (au cas où LinkedIn déborde)
@@ -162,8 +163,8 @@ def lancer(q: dict):
         params["distance"] = None
     if "pays" in q:
         params["country_indeed"] = q["pays"]
-    if "linkedin" in q["sites"]:
-        params["linkedin_fetch_description"] = True
+    if "linkedin" in q["sites"] or "hellowork" in q["sites"]:
+        params["fetch_description"] = True
     return scrape_jobs(**params)
 
 
