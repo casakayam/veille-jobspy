@@ -178,7 +178,7 @@ def main() -> None:
         anciennes = {o["id"]: o for o in json.loads(sortie_path.read_text()).get("offres", [])
                      if garder(o["titre"], o["description"], o["lieu"])[0]}
 
-    journal, nouvelles, ecartees = [], {}, {}
+    journal, nouvelles, ecartees, exemples = [], {}, {}, []
     for i, q in enumerate(QUERIES):
         label = q["terme"]
         entree = {"sites": q["sites"], "pays": q.get("pays", ""), "requete": label}
@@ -204,6 +204,8 @@ def main() -> None:
                 ok, raison = garder(titre, desc, lieu)
                 if not ok:
                     ecartees[raison] = ecartees.get(raison, 0) + 1
+                    if len(exemples) < 150:
+                        exemples.append(f"{raison} | {site} | {titre[:80]} | {lieu[:40]}")
                     continue
                 cle_doublon = f"{titre.lower()}|{texte(row.get('company')).lower()}"
                 if any(o["_cle"] == cle_doublon for o in nouvelles.values()):
@@ -249,7 +251,7 @@ def main() -> None:
         {"mis_a_jour": maj, "nb_offres": len(liste), "offres": liste},
         ensure_ascii=False, indent=1))
     (DATA / "journal.json").write_text(json.dumps(
-        {"mis_a_jour": maj, "ecartees": ecartees, "requetes": journal},
+        {"mis_a_jour": maj, "ecartees": ecartees, "requetes": journal, "exemples_ecartes": exemples},
         ensure_ascii=False, indent=1))
     vues_path.write_text(json.dumps(vues, ensure_ascii=False, indent=0))
 
