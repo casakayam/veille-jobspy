@@ -79,7 +79,8 @@ POSTE_COUPLE = re.compile(
     r"|\bpareja (de )?(guardeses|caseros|encargad|para|interna|responsable|de servicio|trabajador)"
     r"|\bmatrimonio (interno|para|de servicio|guardeses|caseros|encargad)"
     r"|\b(guardeses|caseros)\b"
-    r"|gardien(ne)?s? de refuge|guarda de refugio|hut warden",
+    r"|gardien(ne)?s? de refuge|guarda de refugio|hut warden"
+    r"|\ben bin[ôo]me\b|\bbin[ôo]mes? (accept|bienvenu|possible)",
     re.I,
 )
 # Phrases qui EXCLUENT les couples
