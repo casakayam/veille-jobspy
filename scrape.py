@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 import random
 import re
 import time
@@ -20,89 +21,83 @@ from pathlib import Path
 from jobspy import scrape_jobs
 
 DATA = Path(__file__).parent / "data"
-HOURS_OLD = 72          # fenêtre de publication : 3 jours, pour couvrir un jour raté
+HOURS_OLD = int(os.environ.get("HOURS_OLD") or 72)  # fenêtre de publication (3 jours par défaut)
 KEEP_DAYS = 7           # une offre reste dans le JSON 7 jours après sa première vue
 FORGET_DAYS = 180       # au-delà, on oublie l'offre dans vues.json
 DESC_MAX = 4000         # caractères de description gardés par offre
 
 # --------------------------------------------------------------------------
-# Requêtes. "sites" : indeed, hellowork, linkedin, google.
-# Pour Indeed, "pays" = nom JobSpy du pays (france, spain, ireland…).
+# Requêtes. "sites" : indeed, hellowork, linkedin.
+# Pour Indeed, "pays" = nom JobSpy du pays. Mots sans guillemets = tous requis.
+# Pas de OR : sur Indeed il élargit la recherche au lieu de la cibler.
+# (Google Jobs testé le 10/11/2026 : aucune donnée depuis GitHub, retiré.)
 # --------------------------------------------------------------------------
+def _indeed(pays: str, lieu: str, termes: list[str]) -> list[dict]:
+    return [{"sites": ["indeed"], "pays": pays, "lieu": lieu, "terme": t} for t in termes]
+
+
 QUERIES: list[dict] = [
-    # France — Indeed
-    *[{"sites": ["indeed"], "pays": "france", "lieu": "France", "terme": t} for t in [
-        '"couple de gardiens"',
-        '"couple de gérants"',
-        '"couple" gérants camping',
-        '"couple" responsables gîte OR auberge OR refuge',
-        '"poste en couple" logé',
-        '"couple" régisseurs OR intendants domaine',
-        '"couple" hôtel logé gérance',
-        '"gardien de refuge"',
-    ]],
-    # France — HelloWork
+    *_indeed("france", "France", [
+        "couple gardiens", "couple gérants", "couple concierges", "couple régisseurs",
+        "couple intendants", "couple camping", "couple gîte", "couple hôtel logé",
+        "poste en couple", "gardien refuge",
+    ]),
     *[{"sites": ["hellowork"], "lieu": None, "terme": t} for t in [
-        "couple gardiens",
-        "couple gérants",
-        "couple camping",
-        "poste en couple",
+        "couple gardiens", "couple gérants", "couple camping", "poste en couple", "couple concierges",
     ]],
-    # Espagne
-    *[{"sites": ["indeed"], "pays": "spain", "lieu": "España", "terme": t} for t in [
-        "pareja guardeses",
-        "pareja caseros",
-        "pareja encargados",
-        "matrimonio interno",
-    ]],
-    # Portugal (en anglais, langue de travail possible)
-    {"sites": ["indeed"], "pays": "portugal", "lieu": "Portugal", "terme": '"couple" caretakers OR managers'},
-    # Irlande
-    *[{"sites": ["indeed"], "pays": "ireland", "lieu": "Ireland", "terme": t} for t in [
-        '"live-in couple"',
-        '"management couple"',
-        '"couple" caretakers OR housekeepers',
-    ]],
-    # Suisse, Belgique, Luxembourg
-    {"sites": ["indeed"], "pays": "switzerland", "lieu": "Suisse", "terme": '"couple" gérants OR gardiens OR concierges'},
-    {"sites": ["indeed"], "pays": "belgium", "lieu": "Belgique", "terme": '"couple" gérants OR gardiens'},
-    {"sites": ["indeed"], "pays": "luxembourg", "lieu": "Luxembourg", "terme": '"couple" gérants OR gardiens'},
-    # Italie, Grèce (offres en anglais)
-    {"sites": ["indeed"], "pays": "italy", "lieu": "Italia", "terme": '"couple" villa OR estate managers'},
-    {"sites": ["indeed"], "pays": "greece", "lieu": "Greece", "terme": '"couple" villa OR hotel managers'},
-    # LinkedIn — souvent bloqué depuis GitHub, gardé en bonus
-    {"sites": ["linkedin"], "lieu": "European Union", "terme": "couple manager hotel OR guesthouse OR lodge"},
-    {"sites": ["linkedin"], "lieu": "European Union", "terme": "caretaker couple"},
-    # Google Jobs — agrège beaucoup de sites, souvent capricieux
-    {"sites": ["google"], "google": "couple de gardiens offre d'emploi logé France since last 3 days"},
-    {"sites": ["google"], "google": "couple gérants camping OR gîte emploi since last 3 days"},
-    {"sites": ["google"], "google": "live-in couple managers hotel Europe jobs since last 3 days"},
+    *_indeed("spain", "España", [
+        "pareja guardeses", "pareja caseros", "pareja encargados", "matrimonio interno", "se busca pareja",
+    ]),
+    *_indeed("portugal", "Portugal", ["couple caretakers", "couple managers"]),
+    *_indeed("ireland", "Ireland", ["live-in couple", "couple caretakers", "couple managers"]),
+    *_indeed("switzerland", "Suisse", ["couple concierges", "couple gérants", "couple gardiens"]),
+    *_indeed("belgium", "Belgique", ["couple concierges", "couple gérants"]),
+    *_indeed("luxembourg", "Luxembourg", ["couple gérants"]),
+    *_indeed("italy", "Italia", ["couple managers", "couple caretakers"]),
+    *_indeed("greece", "Greece", ["couple managers"]),
+    # LinkedIn : une seule requête, il bloque (429) dès la deuxième depuis GitHub
+    {"sites": ["linkedin"], "lieu": "European Union", "terme": "live-in couple"},
 ]
 
 # --------------------------------------------------------------------------
 # Filtres
 # --------------------------------------------------------------------------
-# Expressions qui contiennent "couple" sans parler d'un poste en couple
-FAUX_COUPLE = re.compile(
-    r"a couple of|couple of (years|months|weeks|days|hours)|couple d'(années|heures|semaines)|"
-    r"couple moteur|couple de serrage",
+# Indices qu'un POSTE vise un couple (pas juste le mot "couple" dans le texte)
+POSTE_COUPLE = re.compile(
+    r"\bcouple (de |d')(gardiens|g[ée]rants|concierges|r[ée]gisseurs|intendants|responsables|h[ôo]tes|"
+    r"employ[ée]s|maisons?|cuisiniers?|travailleurs|managers|gestionnaires|animateurs|accueil)"
+    r"|(recherch\w*|cherch\w*|recrut\w*|pour|embauch\w*|engag\w*) (un |le |d'un )?couple\b"
+    r"|\b(poste|emploi|travail|candidature|profil)s? (en|de|pour un) couple"
+    r"|\bcouples? (accept[ée]s?|bienvenus?|possibles?|appr[ée]ci[ée]s?|souhait[ée]s?|id[ée]al)"
+    r"|\bcouple (logé|motiv[ée]|polyvalent|dynamique|disponible|exp[ée]riment[ée])"
+    r"|\b(live-in|management|host|hosting|caretaker|caretaking|domestic|working|housekeeping|chalet|resort|site|"
+    r"warden|managing|estate|house|villa|lodge|hotel|hostel|campsite) couples?\b"
+    r"|\bcouples? (wanted|required|welcome|considered|needed|position|role|job|only|to (manage|run|look after))"
+    r"|(seeking|looking for|recruiting|hiring|hire|require|need|wanted:?) (an? )?(\w+ ){0,2}couple\b"
+    r"|husband and wife|wife and husband"
+    r"|(se busca|buscamos|busca|necesita|precisa|requiere|para) (una )?pareja"
+    r"|\bpareja (de )?(guardeses|caseros|encargad|para|interna|responsable|de servicio|trabajador)"
+    r"|\bmatrimonio (interno|para|de servicio|guardeses|caseros|encargad)"
+    r"|\b(guardeses|caseros)\b"
+    r"|gardien(ne)?s? de refuge|guarda de refugio|hut warden",
     re.I,
 )
-# Il faut au moins un de ces indices dans le titre ou la description
-INDICE_COUPLE = re.compile(
-    r"\bcouples?\b|\bpareja\b|\bmatrimonio\b|\bbin[ôo]me\b|\bduo\b|\bdeux personnes\b|"
-    r"\bhusband and wife\b|\bwife and husband\b|\btwo people\b|\bcasal\b|\bcoppia\b|"
-    r"gardien(ne)? de refuge|guarda de refugio|hut warden",
+# Phrases qui EXCLUENT les couples
+REFUS_COUPLE = re.compile(
+    r"(n'acceptons pas|ne prenons pas|pas de|non aux|sans|not accept\w*|no|no se aceptan?)\s+"
+    r"(les )?(bin[ôo]mes ou (les )?)?(couples?|parejas?)\b",
     re.I,
 )
 # Titres à écarter d'office
 TITRE_EXCLU = re.compile(
     r"immeuble|copropri|syndic|r[ée]sidence autonomie|ehpad|nettoyage|agent d'entretien|"
     r"aide[- ]soignant|infirmi|chauffeur|vendeu|caissi|cleaner|nanny|nounou|baby-?sitt|"
-    r"au pair|portier|conseill(er|ère) en|th[ée]rapeut|psycho|stage|intern(ship)?\b|alternance",
+    r"au pair|portier|conseill(er|ère) en|th[ée]rapeut|psycho|stage|intern(ship)?\b|alternance|"
+    r"travailleu\w+ social|[ée]ducat|accompagnant|support worker|relief worker|care assistant|"
+    r"vigilant|s[ée]curit[ée]|technici|op[ée]rat(eur|rice)|ing[ée]nieur|d[ée]veloppeu|comptab",
     re.I,
 )
-# Lieux hors cible (au cas où LinkedIn ou Google débordent)
+# Lieux hors cible (au cas où LinkedIn déborde)
 LIEU_EXCLU = re.compile(
     r"\b(USA|United States|Canada|Australia|South Africa|New Zealand|India|UAE|Dubai)\b|"
     r", (AL|AK|AZ|CA|CO|FL|GA|NY|TX|WA|NC|VA|MA|IL)\b",
@@ -142,9 +137,11 @@ def garder(titre: str, desc: str, lieu: str) -> tuple[bool, str]:
         return False, "titre exclu"
     if LIEU_EXCLU.search(lieu):
         return False, "hors Europe"
-    corpus = FAUX_COUPLE.sub(" ", f"{titre}\n{desc}")
-    if not INDICE_COUPLE.search(corpus):
-        return False, "pas de couple"
+    corpus = f"{titre}\n{desc}"
+    if REFUS_COUPLE.search(corpus):
+        return False, "couples refusés"
+    if not POSTE_COUPLE.search(corpus):
+        return False, "pas un poste en couple"
     return True, ""
 
 
@@ -158,8 +155,6 @@ def lancer(q: dict):
     )
     if "terme" in q:
         params["search_term"] = q["terme"]
-    if "google" in q:
-        params["google_search_term"] = q["google"]
     if q.get("lieu"):
         params["location"] = q["lieu"]
     else:
@@ -180,11 +175,12 @@ def main() -> None:
     sortie_path = DATA / "offres-jobspy.json"
     anciennes = {}
     if sortie_path.exists():
-        anciennes = {o["id"]: o for o in json.loads(sortie_path.read_text()).get("offres", [])}
+        anciennes = {o["id"]: o for o in json.loads(sortie_path.read_text()).get("offres", [])
+                     if garder(o["titre"], o["description"], o["lieu"])[0]}
 
     journal, nouvelles, ecartees = [], {}, {}
     for i, q in enumerate(QUERIES):
-        label = q.get("terme") or q.get("google")
+        label = q["terme"]
         entree = {"sites": q["sites"], "pays": q.get("pays", ""), "requete": label}
         try:
             df = lancer(q)

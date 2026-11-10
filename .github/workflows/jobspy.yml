@@ -4,7 +4,12 @@ on:
   schedule:
     # 10:47 UTC = 5:47 à Bogota, avant la veille Claude de 7:34 (lundi à samedi)
     - cron: "47 10 * * 1-6"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Fenêtre de publication en heures (72 par défaut, 336 = 14 jours pour un rattrapage)"
+        required: false
+        default: "72"
 
 permissions:
   contents: write
@@ -29,6 +34,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Lancer la veille
+        env:
+          HOURS_OLD: ${{ inputs.hours }}
         run: python scrape.py
 
       - name: Enregistrer les résultats
