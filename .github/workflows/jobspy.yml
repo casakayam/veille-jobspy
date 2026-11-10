@@ -1,0 +1,44 @@
+name: Veille JobSpy
+
+on:
+  schedule:
+    # 10:47 UTC = 5:47 à Bogota, avant la veille Claude de 7:34 (lundi à samedi)
+    - cron: "47 10 * * 1-6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jobspy
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer JobSpy
+        run: pip install -r requirements.txt
+
+      - name: Lancer la veille
+        run: python scrape.py
+
+      - name: Enregistrer les résultats
+        run: |
+          git config user.name "veille-jobspy"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Aucun changement"
+          else
+            git commit -m "Veille JobSpy $(date -u +%F)"
+            git push
+          fi
