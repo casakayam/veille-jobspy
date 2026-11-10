@@ -1,8 +1,8 @@
 {
- "mis_a_jour": "2026-11-10T17:03:50+00:00",
+ "mis_a_jour": "2026-11-10T17:26:53+00:00",
  "ecartees": {
-  "titre exclu": 47,
-  "pas un poste en couple": 118
+  "pas un poste en couple": 113,
+  "titre exclu": 47
  },
  "requetes": [
   {
@@ -84,7 +84,7 @@
    "pays": "france",
    "requete": "poste en couple",
    "resultats": 30,
-   "retenues": 0
+   "retenues": 1
   },
   {
    "sites": [
@@ -120,7 +120,7 @@
    "pays": "",
    "requete": "couple camping",
    "resultats": 4,
-   "retenues": 0
+   "retenues": 1
   },
   {
    "sites": [
@@ -146,8 +146,8 @@
    ],
    "pays": "spain",
    "requete": "pareja guardeses",
-   "resultats": 4,
-   "retenues": 4
+   "resultats": 2,
+   "retenues": 2
   },
   {
    "sites": [
@@ -173,7 +173,7 @@
    ],
    "pays": "spain",
    "requete": "matrimonio interno",
-   "resultats": 3,
+   "resultats": 2,
    "retenues": 0
   },
   {
@@ -263,8 +263,8 @@
    ],
    "pays": "belgium",
    "requete": "couple concierges",
-   "resultats": 1,
-   "retenues": 1
+   "resultats": 0,
+   "retenues": 0
   },
   {
    "sites": [
@@ -322,14 +322,15 @@
   }
  ],
  "exemples_ecartes": [
-  "titre exclu | indeed | Gardien d'immeublesH/F | Mérignac, NA, France",
-  "titre exclu | indeed | Gardien d'immeubles H/F | Saint-Médard-en-Jalles, NA, France",
   "pas un poste en couple | indeed | Gardien de gymnase H/F | Douvaine, ARA, France",
   "pas un poste en couple | indeed | GARDIEN DE DECHETERIES H/F | Issenheim, GE, France",
+  "titre exclu | indeed | Gardien d'Immeubles F/H | Chalonnes-sur-Loire, B5, France",
   "titre exclu | indeed | Gardien d'immeuble H/F | Angoulême, NA, France",
   "titre exclu | indeed | Gardien d'immeuble H/F | Plaisir, A8, France",
   "titre exclu | indeed | Gardien d'immeubles logé - Beauchamp (95) F/H | Beauchamp, A8, France",
   "titre exclu | indeed | Gardien d'immeubles logé - Versailles (78) - logement T3 F/H | Versailles, A8, France",
+  "titre exclu | indeed | Formateurs indépendants pour adulte : petite maintenance - CAP Gardien d'immeubl | Issy-les-Moulineaux, A8, France",
+  "titre exclu | indeed | Gardien d'immeubles logé - Saint-Germain-en-Laye (78) - logement T3 F/H | Saint-Germain-en-Laye, A8, France",
   "titre exclu | indeed | Gardien(ne) d'Immeubles | Creil, HDF, France",
   "titre exclu | indeed | Gardien(ne) d’immeubles | Mirecourt, GE, France",
   "titre exclu | indeed | Gardien d'immeuble H/F | Aytré, NA, France",
@@ -350,13 +351,12 @@
   "titre exclu | indeed | Gardien.enne d'immeubles - CDI | Nanterre, A8, France",
   "titre exclu | indeed | Gardien d'immeuble - Annemasse H/F | Annemasse, ARA, France",
   "titre exclu | indeed | Gardien d'immeuble h/f | Amiens, HDF, France",
-  "titre exclu | indeed | Gardien d'immeuble H/F | Oullins, ARA, France",
   "titre exclu | indeed | Gardien d'immeuble non logé H/F - CDI- Paimboeuf | Paimbœuf, B5, France",
   "pas un poste en couple | indeed | Directeur Technique Maintenance (H/F), Maintenance, Robotique & Systèmes Automat | Derval, B5, France",
   "pas un poste en couple | indeed | Chef Concierge F/H | Nolinski Golfe de St Tropez | Gassin, B8, France",
   "pas un poste en couple | indeed | Responsable animation en camping | Lacanau, NA, France",
-  "titre exclu | indeed | technicien de camping h/f | Le Barcarès, O, France",
   "pas un poste en couple | indeed | Responsable technique et entretien Camping F/H- CDD Saisonnier | Douarnenez, A2, France",
+  "titre exclu | indeed | technicien de camping h/f | Le Barcarès, O, France",
   "titre exclu | indeed | TECHNICIEN POLYVALENT EN CAMPING (H/F) | Lacanau, NA, France",
   "pas un poste en couple | indeed | Responsable de Camping Adjoint : Resto/Technique (F/H) | Royat, ARA, France",
   "pas un poste en couple | indeed | Responsable de Camping (H/F) Camping le Pasquier | Dole, BFC, France",
@@ -387,7 +387,6 @@
   "titre exclu | indeed | STAGE - DETECTION DE DEFAUT SUR PIECE VIA IA NON-SUPERVISEE SODERN F/H | Limeil-Brévannes, A8, France",
   "pas un poste en couple | indeed | Bioinformaticien F/H 100% / Plateforme de médecine génomique/ Cellule Bioinforma | Bron, ARA, France",
   "titre exclu | indeed | Stage - Approches adaptatives de perception collaborative sous contraintes résea | Châtillon, A8, France",
-  "pas un poste en couple | indeed | Sage Femme de DAN (H/F) [60078] | Mamoudzou, DTM, France",
   "titre exclu | indeed | Travailleur social Accompagnement social - ORLEANS (Remplacement) H/F | Orléans, CVL, France",
   "titre exclu | indeed | STAGE - Modélisation d'un simulateur Tourelle F/H | Versailles, A8, France",
   "pas un poste en couple | indeed | Responsable de maison H/F | Semur-en-Auxois, BFC, France",
@@ -397,7 +396,7 @@
   "titre exclu | indeed | Psychologue unité médico-judiciaire - h/f | La Tronche, ARA, France",
   "titre exclu | indeed | Technicien de maintenance H/F | Genay, ARA, France",
   "titre exclu | indeed | Psychologue cump-samu - h/f | Grenoble, ARA, France",
-  "pas un poste en couple | indeed | Sage Femme Bloc obstétrical et urgences gynéco-obstétricales | Saint-Étienne, ARA, France",
+  "pas un poste en couple | indeed | Conducteur de travaux réhabilitation - Canada (H/F) | Strasbourg, GE, France",
   "pas un poste en couple | indeed | Esthéticien(ne) H/F | Pléneuf-Val-André, A2, France",
   "pas un poste en couple | indeed | Pédiatre F/H/X | Talant, BFC, France",
   "titre exclu | indeed | Technicien AIT (H/F) | Tinqueux, GE, France",
@@ -418,9 +417,6 @@
   "pas un poste en couple | indeed | Chef de Rang Barman (H/F) | Megève, ARA, France",
   "pas un poste en couple | indeed | ASSISTANT DE SERVICE SOCIAL DE COORDINATION AU CENTRE MATERNEL F/H | Caen, N, France",
   "pas un poste en couple | indeed | Animalier(e) secteur chiens | Bazoches-sur-Guyonne, A8, France",
-  "pas un poste en couple | hellowork | Correspondants Polyvalents Ménage - Accueil en Binôme - Saison 2027 H/F | La Trinité-sur-Mer, 56, France",
-  "pas un poste en couple | hellowork | Correspondants Polyvalents Ménage - Accueil en Binôme - Saison 2027 H/F | Villeneuve-de-Berg, 07, France",
-  "pas un poste en couple | hellowork | Correspondants Polyvalents Ménage - Accueil en Binôme - Saison 2027 H/F | Saint-Jean-de-Monts, 85, France",
   "pas un poste en couple | hellowork | Directeurs de Camping H/F | Mont-de-Marsan, 40, France",
   "titre exclu | hellowork | Opérateur de Production H/F | Carrières-sur-Seine, 78, France",
   "pas un poste en couple | hellowork | Monteur Câbleur Ferroviaire - Grand Déplacement H/F | Toulouse, 31, France",
@@ -438,7 +434,6 @@
   "titre exclu | indeed | Vigilante Movilidad Parets-Moncada | Barcelona, CT, Spain",
   "pas un poste en couple | indeed | Delegado Comercial | Barcelona, CT, Spain",
   "pas un poste en couple | indeed | Consultor Industrial & Logístico Real Estate | Madrid, MD, Spain",
-  "pas un poste en couple | indeed | Cuidadora interna FINES DE SEMANA | Argamasilla de Alba, CM, Spain",
   "pas un poste en couple | indeed | Psicólogo/a | Murcia, MC, Spain",
   "pas un poste en couple | indeed | Consultor/a Gestión de Riesgos (AGRC) | Barcelona, CT, Spain",
   "pas un poste en couple | indeed | Auxiliar de servicios sociales en centro de emergencia para mujeres victimas de  | Madrid, MD, Spain",
@@ -468,9 +463,14 @@
   "titre exclu | linkedin | Healthcare Assistant | Dún Laoghaire-Rathdown, Ireland",
   "titre exclu | linkedin | Healthcare Assistant- Roscommon town, Knockcroghery & surrounding areas | Knockcroghery, County Roscommon, Ireland",
   "pas un poste en couple | linkedin | Property Care Agent | Porto, Portugal",
-  "pas un poste en couple | linkedin | Gouvernant(e) à domicile H/F | Paris, Île-de-France, France",
   "pas un poste en couple | linkedin | Content Lead (m/f/d) | Berlin, Germany",
   "pas un poste en couple | linkedin | Content Creator | San Ġiljan, Saint Julian's, Malta",
-  "pas un poste en couple | linkedin | Team Lead People Operations & Payroll (d/w/m) | Berlin, Berlin, Germany"
+  "pas un poste en couple | linkedin | Team Lead People Operations & Payroll (d/w/m) | Berlin, Berlin, Germany",
+  "pas un poste en couple | linkedin | Content Specialist | San Ġiljan, Saint Julian's, Malta",
+  "titre exclu | linkedin | Nounou H/F sur Cadenet | Cadenet, Provence-Alpes-Côte d'Azur, Fra",
+  "pas un poste en couple | linkedin | Kirjanpitäjä | Loimaa, Southwest Finland, Finland",
+  "titre exclu | linkedin | Healthcare Assistant | Kilmainhamwood, County Meath, Ireland",
+  "pas un poste en couple | linkedin | Assistant | Metz, Grand Est, France",
+  "pas un poste en couple | linkedin | Tattoo Artist | Kalamata, Peloponnese, Greece"
  ]
 }
