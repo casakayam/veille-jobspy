@@ -1,6 +1,6 @@
 # Veille JobSpy
 
-Scraping quotidien (GitHub Actions, lundi à samedi, 5:47 heure de Bogota) des offres d'emploi en couple logées en Europe, avec [JobSpy](https://github.com/speedyapply/JobSpy).
+Scraping quotidien (GitHub Actions, lundi à samedi, 3:13 heure de Bogota ; relancé aussi à chaque modification du script) des offres d'emploi en couple logées en Europe, avec [JobSpy](https://github.com/speedyapply/JobSpy).
 
 - `scrape.py` : requêtes (liste `QUERIES`), filtres, dédoublonnage.
 - `lister.py` : affichage texte des offres récentes, utilisé par la veille Claude.

@@ -2,8 +2,16 @@ name: Veille JobSpy
 
 on:
   schedule:
-    # 10:47 UTC = 5:47 à Bogota, avant la veille Claude de 7:34 (lundi à samedi)
-    - cron: "47 10 * * 1-6"
+    # 08:13 UTC = 3:13 à Bogota, plus de 4 h avant la veille Claude de 7:34 (lundi à samedi).
+    # GitHub peut retarder un horaire de plusieurs heures : d'où la marge.
+    - cron: "13 8 * * 1-6"
+  # Relance automatique quand le script ou ce fichier change
+  push:
+    branches: [main]
+    paths:
+      - scrape.py
+      - requirements.txt
+      - .github/workflows/jobspy.yml
   workflow_dispatch:
     inputs:
       hours:

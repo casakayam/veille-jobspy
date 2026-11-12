@@ -93,7 +93,7 @@ REFUS_COUPLE = re.compile(
 TITRE_EXCLU = re.compile(
     r"immeuble|copropri|syndic|r[ée]sidence autonomie|ehpad|nettoyage|agent d'entretien|"
     r"aide[- ]soignant|infirmi|chauffeur|vendeu|caissi|cleaner|nanny|nounou|baby-?sitt|"
-    r"au pair|portier|conseill(er|ère) en|th[ée]rapeut|psycho|stage|intern(ship)?\b|alternance|"
+    r"au pair|portier|conseill(er|ère) en|conjugal|th[ée]rapeut|psycho|stage|intern(ship)?\b|alternance|"
     r"travailleu\w+ social|[ée]ducat|accompagnant|support worker|relief worker|care assistant|"
     r"vigilant|s[ée]curit[ée]|technici|op[ée]rat(eur|rice)|ing[ée]nieur|d[ée]veloppeu|comptab|"
     r"sage[- ]femme|m[ée]decin|p[ée]diatre|pu[ée]ricult|chercheu|post[- ]?doc",

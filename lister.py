@@ -5,7 +5,7 @@ Usage : python3 lister.py [jours]   (défaut : 3 jours depuis la première vue)
 
 import json
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 DATA = Path(__file__).parent / "data"
@@ -17,6 +17,10 @@ journal = json.loads((DATA / "journal.json").read_text())
 
 recentes = [o for o in offres["offres"] if o["premiere_vue"] >= limite]
 print(f"Fichier mis à jour : {offres['mis_a_jour']} — {len(recentes)} offres vues depuis {limite}\n")
+
+age_h = (datetime.now(timezone.utc) - datetime.fromisoformat(offres["mis_a_jour"])).total_seconds() / 3600
+if age_h > 30:
+    print(f"ATTENTION : fichier JobSpy vieux de {age_h:.0f} h, le scraping GitHub du jour n'a pas tourné.\n")
 
 erreurs = [e for e in journal["requetes"] if e.get("erreurs")]
 if erreurs:
