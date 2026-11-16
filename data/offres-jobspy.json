@@ -1,7 +1,23 @@
 {
- "mis_a_jour": "2026-11-14T15:04:37+00:00",
- "nb_offres": 18,
+ "mis_a_jour": "2026-11-16T18:30:39+00:00",
+ "nb_offres": 19,
  "offres": [
+  {
+   "id": "hellowork-hw-85557581",
+   "site": "hellowork",
+   "titre": "Cavalier Soigneur H/F",
+   "employeur": "",
+   "lieu": "Château-Thierry - Soissons, 02, France",
+   "date_publication": "2026-11-16",
+   "url": "https://www.hellowork.com/fr-fr/emplois/85557581.html",
+   "url_directe": "",
+   "salaire": "",
+   "type_contrat": "fulltime",
+   "emails": "",
+   "description": "Détail du poste\n---------------\n\nPoste et missions :\n\n* Ecurie de réhabilitation chevaux de course cherche un ou une cavalier(ère) soigneur jeunes chevauxdans le secteur Soissons / Château-Thierry (02)\n\n  Dans un cadre d'exception avec logement fourni sur place (personne seule ou couple possible)  \n   Nous recherchons un(e) cavalier(e) - soigneur(se) avec une sérieuse expérience de travail des jeunes chevaux.\n\n  Description du poste:\n\n  + Monte quotidienne\n  + Participation aux taches quotidiennes des écuries au sein de l'équipe (soins, curage, nourrir etc)\n  + Présence requise sur place en semaine pour repas des chevaux le soir et gardiennage de la propriété (en échange du logement)\n  + Optionnel: travaux entretien / espaces verts sur écuries et domaine / Bricolage.\n  + Révisions mécanique. (moyennant rémunération complémentaire)\n\n  Si couple, d'autres postes sont éventuellement à pourvoir dans les écuries ou ci-dessus\n\n  Conditions salariales et informations complémentaires contact par mail aux coordonnées qui vous seront transmises une fois votre candidature effectuée via équi-ressources.",
+   "requete": "poste en couple",
+   "premiere_vue": "2026-11-16"
+  },
   {
    "id": "indeed-in-e196417270cdd72d",
    "site": "indeed",

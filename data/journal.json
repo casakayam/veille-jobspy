@@ -1,8 +1,8 @@
 {
- "mis_a_jour": "2026-11-14T15:04:37+00:00",
+ "mis_a_jour": "2026-11-16T18:30:39+00:00",
  "ecartees": {
-  "pas un poste en couple": 73,
-  "titre exclu": 25
+  "pas un poste en couple": 50,
+  "titre exclu": 20
  },
  "requetes": [
   {
@@ -11,7 +11,7 @@
    ],
    "pays": "france",
    "requete": "couple gardiens",
-   "resultats": 8,
+   "resultats": 1,
    "retenues": 0
   },
   {
@@ -20,7 +20,7 @@
    ],
    "pays": "france",
    "requete": "couple gérants",
-   "resultats": 2,
+   "resultats": 0,
    "retenues": 0
   },
   {
@@ -29,7 +29,7 @@
    ],
    "pays": "france",
    "requete": "couple concierges",
-   "resultats": 0,
+   "resultats": 1,
    "retenues": 0
   },
   {
@@ -56,8 +56,8 @@
    ],
    "pays": "france",
    "requete": "couple camping",
-   "resultats": 19,
-   "retenues": 1
+   "resultats": 4,
+   "retenues": 0
   },
   {
    "sites": [
@@ -65,7 +65,7 @@
    ],
    "pays": "france",
    "requete": "couple gîte",
-   "resultats": 2,
+   "resultats": 1,
    "retenues": 0
   },
   {
@@ -74,8 +74,8 @@
    ],
    "pays": "france",
    "requete": "couple hôtel logé",
-   "resultats": 1,
-   "retenues": 1
+   "resultats": 0,
+   "retenues": 0
   },
   {
    "sites": [
@@ -83,8 +83,8 @@
    ],
    "pays": "france",
    "requete": "poste en couple",
-   "resultats": 30,
-   "retenues": 1
+   "resultats": 22,
+   "retenues": 0
   },
   {
    "sites": [
@@ -92,7 +92,7 @@
    ],
    "pays": "france",
    "requete": "gardien refuge",
-   "resultats": 1,
+   "resultats": 0,
    "retenues": 0
   },
   {
@@ -101,8 +101,8 @@
    ],
    "pays": "",
    "requete": "couple gardiens",
-   "resultats": 3,
-   "retenues": 2
+   "resultats": 0,
+   "retenues": 0
   },
   {
    "sites": [
@@ -119,7 +119,7 @@
    ],
    "pays": "",
    "requete": "couple camping",
-   "resultats": 1,
+   "resultats": 0,
    "retenues": 0
   },
   {
@@ -128,8 +128,8 @@
    ],
    "pays": "",
    "requete": "poste en couple",
-   "resultats": 4,
-   "retenues": 0
+   "resultats": 10,
+   "retenues": 1
   },
   {
    "sites": [
@@ -182,8 +182,8 @@
    ],
    "pays": "spain",
    "requete": "se busca pareja",
-   "resultats": 2,
-   "retenues": 1
+   "resultats": 1,
+   "retenues": 0
   },
   {
    "sites": [
@@ -227,7 +227,7 @@
    ],
    "pays": "ireland",
    "requete": "couple managers",
-   "resultats": 3,
+   "resultats": 1,
    "retenues": 0
   },
   {
@@ -322,103 +322,75 @@
   }
  ],
  "exemples_ecartes": [
-  "pas un poste en couple | indeed | Gardien des installations sportives H/F | Nogent-sur-Marne, A8, France",
-  "titre exclu | indeed | Gardien d'immeubles H/F | Issoire, ARA, France",
-  "titre exclu | indeed | Gardien/ne d'immeuble F/H | Saint-Denis, A8, France",
-  "titre exclu | indeed | Gardien d'immeuble H/F | Orléans, CVL, France",
-  "titre exclu | indeed | GARDIENNE / GARDIEN D'IMMEUBLES | Clichy, A8, France",
-  "titre exclu | indeed | Gardien(ne) d’Immeubles (H/F) - CDD (3 mois) - Maisons-Laffitte (78) | Maisons-Laffitte, A8, France",
-  "titre exclu | indeed | Gardien d'immeuble H/F | Savigny-sur-Orge, A8, France",
-  "pas un poste en couple | indeed | Gardien d'équipement sportif spécialisé F/H | Lyon 9e, ARA, France",
-  "pas un poste en couple | indeed | Gérant(e) restaurant -bar de camping – Saison 2027 – Vaucluse | Avignon, B8, France",
-  "pas un poste en couple | indeed | Gérant(e) snack-bar de camping – Saison 2027 – Porte de la Dordogne | Brive-la-Gaillarde, NA, France",
-  "pas un poste en couple | indeed | Employé entretien / maintenance camping H/F | Saint-Hilaire-de-Riez, B5, France",
-  "pas un poste en couple | indeed | Réceptionniste polyvalent camping F/H- CDD Saisonnier | Loix, NA, France",
-  "pas un poste en couple | indeed | Réceptionniste polyvalent camping F/H- CDD Saisonnier | Loix, NA, France",
-  "pas un poste en couple | indeed | Assistant de direction de camping H/F | Saint-Cybranet, NA, France",
-  "titre exclu | indeed | Technicien(ne) de Maintenance Itinérant Camping | Fréjus, B8, France",
-  "pas un poste en couple | indeed | Animateur camping H/F en contrat pro | Lanton, NA, France",
-  "pas un poste en couple | indeed | Employé(e) de ménage Camping F/H- CDD Saisonnier | Loix, NA, France",
-  "pas un poste en couple | indeed | Superviseur(se) Régional(e) Campings - France Nord/Luxembourg/Belgique/Allemagne | Boulogne-sur-Mer, HDF, France",
-  "pas un poste en couple | indeed | Employé(e) de ménage Camping F/H- CDD Saisonnier | Loix, NA, France",
-  "pas un poste en couple | indeed | Gérant(e) restaurant -bar de camping – Saison 2027 – Vaucluse | Avignon, B8, France",
-  "pas un poste en couple | indeed | Directeur de camping H/F | Méolans-Revel, B8, France",
-  "pas un poste en couple | indeed | Réceptionniste camping H/F | Hudimesnil, N, France",
-  "pas un poste en couple | indeed | Agent technique et entretien Camping F/H- CDD Saisonnier | Loix, NA, France",
-  "pas un poste en couple | indeed | Agent technique et entretien Camping F/H- CDI | Rivedoux-Plage, NA, France",
-  "pas un poste en couple | indeed | Gérant(e) snack-bar de camping – Saison 2027 – Porte de la Dordogne | Brive-la-Gaillarde, NA, France",
-  "pas un poste en couple | indeed | Stagiaire réceptionniste polyvalent(e) camping | Arthez-de-Béarn, NA, France",
-  "pas un poste en couple | indeed | Agent technique et entretien Camping F/H- CDI | Rivedoux-Plage, NA, France",
-  "pas un poste en couple | indeed | Agent technique et entretien Camping F/H- CDD Saisonnier | Loix, NA, France",
-  "titre exclu | indeed | INGENIEUR SYSTÈME F/H CDI | Limeil-Brévannes, A8, France",
-  "titre exclu | indeed | Stage - développement web visualisation et valorisation de données spatiales - h | Ramonville-Saint-Agne, O, France",
+  "pas un poste en couple | indeed | Gardien d'équipement sportif spécialisé F/H - EC21692 | Lyon, ARA, France",
+  "titre exclu | indeed | Couple concierge/agent d'entretien | Benfeld, GE, France",
+  "titre exclu | indeed | Technicien Polyvalent Camping | Saint-Nazaire, B5, France",
+  "pas un poste en couple | indeed | Agent(e) d'entretien (H/F) des locaux et hébergements – Camping 4 étoiles | Trédrez-Locquémeau, A2, France",
+  "titre exclu | indeed | Stage Réceptionniste en camping H/F | Avrillé, B5, France",
+  "titre exclu | indeed | Technicien maintenance et travaux neufs dans un camping | Villeneuve-en-Retz, B5, France",
+  "titre exclu | indeed | Stage - télédétection des algues sargasses à partir de capteurs synthetic apertu | Ramonville-Saint-Agne, O, France",
+  "titre exclu | indeed | Couple concierge/agent d'entretien | Benfeld, GE, France",
+  "pas un poste en couple | indeed | Commis de salle H/F | Aillon-le-Jeune, ARA, France",
+  "pas un poste en couple | indeed | Assistant de Vie H/F | Limoges, NA, France",
+  "pas un poste en couple | indeed | Assistant de Vie F/H | Limoges, NA, France",
+  "pas un poste en couple | indeed | Moniteur(trice) Adjoint(e) d’Animation et d’Activité (H/F)_AMI_Pôle HI | Nancy, GE, France",
+  "pas un poste en couple | indeed | TRAVAILLEUR(SE) SOCIAL(E) DIPLÔMÉ(E) D’ÉTAT (H/F)_AMI_Pôle HI | Nancy, GE, France",
+  "pas un poste en couple | indeed | Monteur Câbleur filaire H/F | Toulouse, O, France",
+  "titre exclu | indeed | Technicien d'atelier machines spéciales H/F | Sainte-Menehould, GE, France",
+  "titre exclu | indeed | 1 CADRE SAGE-FEMME (COORDINATRICE-TEUR SAGE-FEMME) | Dumbéa, DTM, France",
+  "pas un poste en couple | indeed | IDE Obstétrique et Gynécologie NUIT H/F | Montfermeil, A8, France",
+  "titre exclu | indeed | Stage - télédétection des algues sargasses à partir de capteurs synthetic apertu | Ramonville-Saint-Agne, O, France",
+  "titre exclu | indeed | INFIRMIER Hospitalisation Gynécologie - Grossesse Pathologique F/H | Bondy, A8, France",
+  "titre exclu | indeed | Stage bac+5 - Optique H/F | Saint-Paul-lès-Durance, B8, France",
+  "titre exclu | indeed | Stage - master physique médicale - h/f | La Tronche, ARA, France",
+  "titre exclu | indeed | Stage - analyse de sensibilité probabiliste d'une loi de comportement THCM du bé | Fontenay-aux-Roses, A8, France",
+  "titre exclu | indeed | Stage - Ingénieur système H/F | Chusclan, O, France",
+  "titre exclu | indeed | Software Engineer (H/F) - Stage - Paris | Paris, A8, France",
+  "titre exclu | indeed | Stage - Ingénieur simulation CFD Thermohydraulique et méta-modélisation H/F | Bagnols-sur-Cèze, O, France",
+  "pas un poste en couple | indeed | Gestionnaire Stock Maintenance (H/F) | Bora-Bora, DTM, France",
+  "pas un poste en couple | indeed | Serveur chef de rang H/F | Farnay, ARA, France",
   "titre exclu | indeed | Travailleur Social ASS/ES/CESF H/F / CHU LDN H/F | Paris, A8, France",
-  "pas un poste en couple | indeed | Assistant(e) scénographie mariage – profil communication & création de contenu ( | Bordeaux, NA, France",
-  "pas un poste en couple | indeed | Assistant(e) scénographie mariage – profil floral (H/F) | Bordeaux, NA, France",
-  "pas un poste en couple | indeed | Valet femme de chambre H/F | Le Bois-Plage-en-Ré, NA, France",
-  "pas un poste en couple | indeed | Valet ou femme de chambre (F/H/NB) | Élincourt-Sainte-Marguerite, HDF, France",
-  "titre exclu | indeed | Stage Réception et Service - d'avril à août 2027 - Boutique Hotel 4* / Hospitali | Surville, N, France",
-  "pas un poste en couple | indeed | Un(e) Accompagnat.eur(rice) Socio-Juridique H/F | Marseille, B8, France",
-  "titre exclu | indeed | Postdoctorant en Sciences planétaires (H/F) | Orsay, A8, France",
-  "titre exclu | indeed | Aide-soignant de nuit H/F - CDD - Site Les Hirondelles | Mours-Saint-Eusèbe, ARA, France",
-  "pas un poste en couple | indeed | Intervenant social - CDI - CHRS | Villeurbanne, ARA, France",
-  "titre exclu | indeed | Technicien de maintenance train régional – F/H | Nice, B8, France",
-  "titre exclu | indeed | STAGE - MIGRATION WINDOWS 11 F/H | Limeil-Brévannes, A8, France",
-  "titre exclu | indeed | Chercheur en modélisation des agrosystèmes (H/F) | Gif-sur-Yvette, A8, France",
-  "titre exclu | indeed | Technicien·ne de l’Intervention Sociale et Familiale (TISF) | Toulouse, O, France",
-  "titre exclu | indeed | Éducateur spécialisé / Assistant social (H/F) - La Parenthèse | Carrières-sous-Poissy, A8, France",
-  "pas un poste en couple | indeed | Gérant(e) restaurant -bar de camping – Saison 2027 – Vaucluse | Avignon, B8, France",
-  "pas un poste en couple | indeed | Gérant(e) snack-bar de camping – Saison 2027 – Porte de la Dordogne | Brive-la-Gaillarde, NA, France",
-  "pas un poste en couple | indeed | Permanent Lieu de vie | Broons, A2, France",
-  "pas un poste en couple | indeed | Agent des services logistiques H/F - CDI - Résidence Beausoleil | Mours-Saint-Eusèbe, ARA, France",
-  "pas un poste en couple | indeed | Hôte de table - Serveur - Serveuse - (F/H/NB) | Neuville-Bosc, HDF, France",
-  "pas un poste en couple | indeed | Agent de production - Montage mécanique (H/F) | Reims, GE, France",
-  "pas un poste en couple | indeed | Assistant de vie auprès de particuliers à domicile H/F | Mérignac, NA, France",
-  "pas un poste en couple | indeed | Employé(e) de ménage à domicile – 3h/semaine – Périgny (H/F) | Périgny, NA, France",
-  "pas un poste en couple | indeed | Travailleur.se social.e (ES, ASS, CESF) | Épinay-sur-Orge, A8, France",
-  "titre exclu | indeed | AS de jour en EHPAD [109653] | Plaisir, A8, France",
-  "titre exclu | indeed | Technicien Service Rapide (H/F) | Auterive, O, France",
-  "pas un poste en couple | indeed | Adjoint administratif bde hospitalisation - h/f | La Tronche, ARA, France",
-  "titre exclu | indeed | Ingénieur de recherche en pharmacologie moléculaire (H/F) | Montpellier, O, France",
-  "pas un poste en couple | indeed | Animalier(e) | Notre-Dame-du-Hamel, N, France",
-  "titre exclu | hellowork | Couple de Gardien d'Immeubles H/F | Reims, 51, France",
+  "pas un poste en couple | indeed | CDD - Mécanicien monteur H/F | Nantes, B5, France",
+  "pas un poste en couple | hellowork | Chirurgien-Dentiste H/F | Brunoy, 91, France",
+  "pas un poste en couple | hellowork | Orthodontiste H/F | Brunoy, 91, France",
+  "pas un poste en couple | hellowork | Chirurgien-Dentiste H/F | Combs-la-Ville, 77, France",
+  "pas un poste en couple | hellowork | Pédodontiste H/F | Combs-la-Ville, 77, France",
+  "pas un poste en couple | hellowork | Pédodontiste H/F | Brunoy, 91, France",
+  "pas un poste en couple | hellowork | Recrutons un Assistant de Service Social - Intérim - 92 H/F | Colombes, 92, France",
+  "pas un poste en couple | hellowork | Orthodontiste H/F | Combs-la-Ville, 77, France",
   "pas un poste en couple | hellowork | Formation Ajusteur Monteur Structure H/F | Rochefort, 17, France",
   "titre exclu | hellowork | Opérateur de Production H/F | Carrières-sur-Seine, 78, France",
-  "titre exclu | hellowork | Educateur Spécialisé H/F | Colombes, 92, France",
-  "titre exclu | hellowork | Stage Bac+5 - IA et Machine Learning H/F | Grenoble, 38, France",
-  "pas un poste en couple | indeed | Senior Service Manager - Homeless Sector | Dublin, D, Ireland",
+  "titre exclu | indeed | Perinatal Psychologist or Psychotherapist: Clinical and Professional Development | Remote, Ireland",
   "pas un poste en couple | indeed | Junior Sales Executive | Carlow, CW, Ireland",
-  "pas un poste en couple | indeed | Sales & Marketing Manager | DUBLIN 1, D, Ireland",
-  "pas un poste en couple | indeed | Senior Service Manager - Homeless Sector | Dublin, D, Ireland",
+  "titre exclu | linkedin | Healthcare Assistant – Rewarding Career Opportunity in Tramore | Tramore, County Waterford, Ireland",
+  "pas un poste en couple | linkedin | Senior Social Media & AI Video Lead | Sweden",
+  "pas un poste en couple | linkedin | Creative Lead | Paris, Île-de-France, France",
+  "pas un poste en couple | linkedin | Head of Creative Strategy | Netherlands",
+  "pas un poste en couple | linkedin | SOCIAL MEDIA & CONTENT SPECIALIST | Amsterdam, North Holland, Netherlands",
+  "pas un poste en couple | linkedin | Travel Consultant | Como, Lombardy, Italy",
+  "pas un poste en couple | linkedin | Community Manager & Creator Partnerships | France",
+  "pas un poste en couple | linkedin | Villa Sales & Operations Executive | Athens, Attiki, Greece",
+  "pas un poste en couple | linkedin | Product Manager - Acquisition & Conversion | Ljubljana, Ljubljana, Slovenia",
+  "pas un poste en couple | linkedin | Co-Founder & CTO | Finland",
+  "pas un poste en couple | linkedin | Customer Service Employee | Rotterdam, South Holland, Netherlands",
+  "pas un poste en couple | linkedin | Co-General Manager | Budapest, Hungary",
+  "pas un poste en couple | linkedin | Professional Actor | Helsinki, Uusimaa, Finland",
+  "pas un poste en couple | linkedin | Chief Marketing Officer | Vilnius, Vilniaus, Lithuania",
+  "pas un poste en couple | linkedin | Head of IP Supply Partnerships | Vilnius, Vilniaus, Lithuania",
+  "pas un poste en couple | linkedin | Customer Succes Operations Professional | Delft, South Holland, Netherlands",
+  "pas un poste en couple | linkedin | Team Lead - LATAM | Nicosia, Cyprus",
+  "pas un poste en couple | linkedin | Personalleitung (m/w/d) | Weeze, North Rhine-Westphalia, Germany",
+  "pas un poste en couple | linkedin | Group Financial Controller | Helsinki, Uusimaa, Finland",
+  "pas un poste en couple | linkedin | SEO Affiliate Manager - iGaming | Cyprus",
+  "pas un poste en couple | linkedin | Business Development & Partnerships Manager | Birkirkara, Malta",
+  "pas un poste en couple | linkedin | Travel Consultant | Paris, Île-de-France, France",
+  "pas un poste en couple | linkedin | Immobilienenthusiast (d/w/m) | Berlin, Berlin, Germany",
+  "pas un poste en couple | linkedin | Performance Creative Lead, Europe | Berlin, Berlin, Germany",
   "pas un poste en couple | linkedin | General Counsel (remote) | Sofia, Sofia City, Bulgaria",
   "pas un poste en couple | linkedin | General Counsel (remote) | Vilnius, Vilniaus, Lithuania",
-  "pas un poste en couple | linkedin | Auxiliaire de Vie (H/F) | Chartres, Centre-Val de Loire, France",
-  "pas un poste en couple | linkedin | Valet/Femme de chambre CDI F/H | St-Malo, Brittany, France",
-  "pas un poste en couple | linkedin | Affiliate & Partnerships Manager | Meta | Portugal",
-  "pas un poste en couple | linkedin | Auxiliaire de Vie (H/F) | Gallardon, Centre-Val de Loire, France",
-  "pas un poste en couple | linkedin | Entrepreneur In Residence | Italy",
+  "pas un poste en couple | linkedin | Addetto/A Al Servizio Clienti Italiano | Lavoro Da Remoto In Portogallo | Coimbra, Coimbra, Portugal",
+  "pas un poste en couple | linkedin | Partnerships & Community Coordinator (H/F) | Levallois-Perret, Île-de-France, France",
   "pas un poste en couple | linkedin | Team Manager, Guest & Host Care (maternity cover) | Aarhus, Central Denmark Region, Denmark",
-  "pas un poste en couple | linkedin | Junior Performance Marketer (Remote - Greece) | Greece",
-  "pas un poste en couple | linkedin | Kandidaat-Notaris Familierecht Delft | Delft, South Holland, Netherlands",
-  "pas un poste en couple | linkedin | Junior Performance Marketer (Remote - Malta) | Malta",
-  "pas un poste en couple | linkedin | Content Creator till Happident – distansarbete | Gothenburg, Västra Götaland County, Swed",
-  "pas un poste en couple | linkedin | Head of HR | San Ġiljan, Saint Julian's, Malta",
-  "pas un poste en couple | linkedin | Influencer and Social Media Lead | Finland",
-  "pas un poste en couple | linkedin | Social Media & Personal Brand Managerin (m/w/d) - Remote | Germany",
-  "pas un poste en couple | linkedin | Influencer and Social Media Lead | Greece",
-  "pas un poste en couple | linkedin | Personal Financial Planner | Prague, Prague, Czech Republic",
-  "pas un poste en couple | linkedin | Events & Operations Manager | Sliema, Malta",
-  "pas un poste en couple | linkedin | Head of Supply | Cyprus",
-  "pas un poste en couple | linkedin | 🔎 HLEDÁM: Firmu, která chce být vidět | Prague, Czech Republic",
-  "pas un poste en couple | linkedin | Luxury Travel Sales Consultant | Dublin, County Dublin, Ireland",
-  "pas un poste en couple | linkedin | Concierge Assistant | Galway, County Galway, Ireland",
-  "pas un poste en couple | linkedin | Salesperson | Budapest, Hungary",
-  "pas un poste en couple | linkedin | Virtual Assistant | Hungary",
-  "pas un poste en couple | linkedin | Listing Coordinator | Hungary",
-  "pas un poste en couple | linkedin | Product Manager, Campaign Pages | Cyprus",
-  "pas un poste en couple | linkedin | Group Product Manager | Cyprus",
-  "pas un poste en couple | linkedin | Director of Sales - Helsinki | Helsinki, Uusimaa, Finland",
-  "pas un poste en couple | linkedin | Entrepreneur in Residence (EIR) - ComparaJa | Lisbon, Lisbon, Portugal",
-  "pas un poste en couple | linkedin | Sales Manager - Helsinki | Helsinki, Uusimaa, Finland"
+  "pas un poste en couple | linkedin | Co-Founder & Head of Data and AI Strategy | Portugal"
  ]
 }
